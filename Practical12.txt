@@ -1,0 +1,47 @@
+import java.io.*;
+
+public class Practical12 {
+    public static void main(String[] args) {
+        try {
+            // Open the input file
+            BufferedReader input = new BufferedReader(new FileReader("rhyme.txt"));
+            
+            // Open the output file
+            BufferedWriter output = new BufferedWriter(new FileWriter("rhyme2.txt"));
+            
+            // Keep track of the current verse and line number
+            int verse = 1;
+            int line = 1;
+            
+            // Read each line from the input file and write to the output file
+            String text;
+            while ((text = input.readLine()) != null) {
+                // Write the line to the output file
+                output.write("[" + verse + "]" + " [" + line + "] " + text);
+                output.newLine();
+                
+                // Increment the line number
+                line++;
+                
+                // Check if we've reached the end of a verse
+                if (text.isEmpty()) {
+                    // Increment the verse number and reset the line number
+                    verse++;
+                    line = 1;
+                }
+            }
+            
+            // Write your name and student number to the end of the file
+            output.write("Written by ChatGPT, Student number: 123456789");
+            
+            // Close the input and output files
+            input.close();
+            output.close();
+            
+            System.out.println("Successfully wrote to file.");
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+    }
+}

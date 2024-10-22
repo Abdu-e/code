@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  header {
+    background-color: var(--nav-bg-color);
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+  }
+  
+  .logo h1 {
+    color: var(--nav-text-color);
+    font-size: 24px;
+  }
+  
+  .nav-links {
+    list-style-type: none;
+  }
+  
+  .nav-links li {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: var(--nav-text-color);
+    font-size: 16px;
+  }
+  
+  .btn {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #e68a00;
+  }
+  
+  .hero {
+    height: 100vh;
+    background: url('https://example.com/hero-bg.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .hero-content h2 {
+    color: #fff;
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  .hero-content p {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .hero-btn {
+    font-size: 18px;
+  }
+  
+  footer {
+    background-color: var(--footer-bg-color);
+    color: var(--footer-text-color);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Theme Toggle Button */
+  .toggle-btn {
+    background-color: transparent;
+    color: var(--nav-text-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  
+  .toggle-btn:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+  }
+  
+  /* Light and Dark Theme Variables */
+  :root {
+    --bg-color: #fff;
+    --text-color: #333;
+    --primary-color: #ff9800;
+    --nav-bg-color: #000;
+    --nav-text-color: #fff;
+    --footer-bg-color: #000;
+    --footer-text-color: #fff;
+  }
+  
+  [data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --primary-color: #ff9800;
+    --nav-bg-color: #1f1f1f;
+    --nav-text-color: #e0e0e0;
+    --footer-bg-color: #1f1f1f;
+    --footer-text-color: #e0e0e0;
+  }
+  
+  

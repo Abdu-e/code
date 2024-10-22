@@ -1,0 +1,53 @@
+import java.util.*;
+
+public class ExampleCT 
+{
+    public static void main(String[] args) 
+    {
+        Scanner sc = new Scanner(System.in);
+
+        // Step 1: Ask the user to input the number of babies in the creche
+        System.out.print("Enter the number of babies in the creche: ");
+        int n = sc.nextInt();
+
+        // Step 2: Ask the user to input each baby's arrival and departure times
+        int[] arrival = new int[n];
+        int[] departure = new int[n];
+
+        for(int i = 0; i < n; i++) 
+        {
+            System.out.print("Enter baby " + (i+1) + "'s arrival and departure times (separated by comma): ");
+            String[] times = sc.next().split(",");
+            arrival[i] = Integer.parseInt(times[0]);
+            departure[i] = Integer.parseInt(times[1]);
+        }
+
+        // Step 3: Store these data into a data structure
+        List<Pair> babyTimes = new ArrayList<Pair>();
+        for(int i = 0; i < n; i++) 
+        {
+            Pair baby = new Pair(arrival[i], departure[i]);
+            babyTimes.add(baby);
+        }
+
+        // Step 4: Apply algorithm 1 on the data structure and determine the pairs
+        List<Pair> contactList = new ArrayList<Pair>();
+
+        for(int i = 0; i < n; i++) 
+        {
+            int arr1 = babyTimes.get(i).first;
+            int dep1 = babyTimes.get(i).second;
+        }
+
+            for(int j = i + 1; j < n; j++) 
+            {
+                int arr2 = babyTimes.get(j).first;
+                int dep2 = babyTimes.get(j).second;
+            }
+
+                if(arr1 <= dep2 && arr2 <= dep1) 
+                {
+                    Pair contact = new Pair(i+1, j+1);
+                }
+    }
+}      

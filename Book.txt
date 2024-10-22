@@ -1,0 +1,18 @@
+//Esau
+//Abdu-Raziq
+//4270797
+//CSC211 2023 Practical
+
+public class Book
+{
+    String title;
+    String author;
+    String publisher;
+    int bookId = 0;
+    public static void main (String[] args)
+    {
+        
+
+        String
+    }
+}
